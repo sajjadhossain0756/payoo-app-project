@@ -6,7 +6,7 @@ document.getElementById('login-button').addEventListener('click',function(event)
       const pinNumber = document.getElementById('pin-number').value;
       
       if(pinNumber === '1234'){
-          window.location.href = '/home.html';
+          window.location.href = './home.html';
       }
       else{
         alert('your mobile number or pin number is incorrect !');
