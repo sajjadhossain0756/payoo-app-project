@@ -7,9 +7,20 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #transaction-container p{
+            padding: 12px;
+            border-radius: 5px;
+            color: white;
+            width: 300px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 2px 0px 10px rgba(69, 67, 67, 0.4);
+        }
+    </style>
 </head>
 <body>
-    <main class="flex justify-center">
+    <main class="flex justify-center items-center">
         <div class="mockup-phone">
             <div class="camera"></div>
             <div class="display">
@@ -21,9 +32,10 @@
                     </div>
                   </div>
                   <div class="divider"></div>
-                  <div class="mb-3">
-                    <button id="feature-add-money-btn" class="btn btn-outline btn-primary mr-3">Add Money</button>
+                  <div class="mb-3 flex gap-1">
+                    <button id="feature-add-money-btn" class="btn btn-outline btn-primary">Add Money</button>
                     <button id="feature-cash-out-btn" class="btn btn-outline btn-primary">Cash Out</button>
+                    <button id="transaction-btn" class="btn btn-outline btn-primary">Transaction</button>
                   </div>
                   
                   <!-- add-money form start here -->
@@ -40,7 +52,7 @@
                         <label class="label">
                           <span class="label-text">Pin Number</span>
                         </label>
-                        <input id="pin-number" type="password" placeholder="pin number" class="input input-bordered" required />
+                        <input id="pin-number" type="password" placeholder="pin number" autocomplete="off" class="input input-bordered" required />
                     
                       </div>
                       <div class="form-control mt-6">
@@ -48,6 +60,7 @@
                       </div>
                     </form>
                   </div>
+
                   <!-- cash-out form start here -->
 
                   <div id="cash-out-form" class="hidden card bg-base-100 w-[90%] max-w-sm shrink-0 shadow-2xl">
@@ -62,7 +75,7 @@
                         <label class="label">
                           <span class="label-text">Pin Number</span>
                         </label>
-                        <input id="cash-out-pin-number" type="password" placeholder="pin number" class="input input-bordered" required />
+                        <input id="cash-out-pin-number" type="password" placeholder="pin number" autocomplete="off" class="input input-bordered" required />
                     
                       </div>
                       <div class="form-control mt-6">
@@ -70,6 +83,14 @@
                       </div>
                     </form>
                   </div>
+
+                  <!-- transaction history start here -->
+                   <div id="transaction-history" class="hidden">
+                        <h1 class="font-bold 3xl mb-4 text-center bg-green-300 w-full p-3 rounded-sm">Transaction History</h1>
+                        <div id="transaction-container" class="flex flex-col gap-3">
+                            
+                        </div>
+                   </div>
               </div>
             </div>
           </div>

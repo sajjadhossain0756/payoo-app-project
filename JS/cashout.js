@@ -17,6 +17,11 @@ document.getElementById('cash-out-button').addEventListener('click',function(eve
         const newBalance = accountBalance - cashOutAmount;
 
         document.getElementById('total-balance').innerText = newBalance;
+
+        const p = document.createElement('p');
+              p.innerText = `${cashOutAmount}taka cash-out is successful`;
+              document.getElementById('transaction-container').appendChild(p);
+              p.style.backgroundColor = 'red';
     }else{
         alert('your cash-out is not successful');
     }

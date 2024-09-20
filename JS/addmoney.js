@@ -16,9 +16,15 @@ document.getElementById('add-money-button').addEventListener('click',function(ev
         let newBalance = accountBalance + addAmount;
         
         document.getElementById('total-balance').innerText = newBalance;
+        const p = document.createElement('p');
+              p.innerText = `${addAmount}taka add-money is successful`;
+              document.getElementById('transaction-container').appendChild(p);
+              p.style.backgroundColor = 'green';
+            //   p.style.boxShadow = '2px 4px 4px 0.5';
         
     }
     else{
         alert('your add money is not successful');
-    }
+    }    
 })
+

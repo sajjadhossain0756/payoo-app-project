@@ -12,9 +12,10 @@ function getTextValueById(id){
 }
 
 function showSectionById(id){
-    document.getElementById('add-money-form').classList.remove('hidden');
-    document.getElementById('cash-out-form').classList.remove('hidden');
+    document.getElementById('add-money-form').classList.add('hidden');
+    document.getElementById('cash-out-form').classList.add('hidden');
+    document.getElementById('transaction-history').classList.add('hidden');
 
-    const toggleSection = document.getElementById(id).classList.add('hidden');
-    return toggleSection;
+    document.getElementById(id).classList.remove('hidden');
+    
 }
